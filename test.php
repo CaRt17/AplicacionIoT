@@ -10,27 +10,27 @@
     <!--<script src="main.js"></script>-->
 </head>
 <body>
-    Hola intenamos conectar <br/>
+    Hola intentamos conectar <br/>
 
 
 <?php
-//La siguiente linea configura el modo de conexion a el com3 y 9600 baudios
-  exec("mode COM7 BAUD=9600 PARITY=N data=8 stop=1 xon=off");
+     exec("mode COM7 BAUD=9600 PARITY=N data=8 stop=1 xon=off");//La siguiente linea configura el modo de conexion a el com7 y 9600 baudios
  
-  $fp = @fopen ("COM7", "w+"); //Abre el puerto COM7 para leer y escribir
-  if (!$fp) {
-  $status = "No conectado";
-} else {
-   $status = "Conectado";
-   $string = 'a';
-   $hex = bin2hex($string);
-   fwrite($fp, $hex); //Escribe en el puerto serial 
-   fclose($fp);
-}
-echo $status; ?><br/>
-
-<?php echo $hex;
-
+    $fp = @fopen ("COM7", "w+"); //Abre el puerto COM7 para leer y escribir
+    if (!$fp) {
+        $status = "No conectado";
+    }else {
+        $status = "Conectado";
+        $string = 'a';
+        $hex = bin2hex($string);
+        fwrite($fp, $hex); //Escribe en el puerto serial 
+        fclose($fp);
+    }
+    echo $status; 
+?>
+<br/>
+<?php   
+    echo $hex;
 ?>
 
 </body>
