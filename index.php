@@ -12,17 +12,9 @@
 </head>
 <body>
     
-    <header>
-        <div class="logo">App Iot</div>
-        <div class="nav">
-            <ul class="menu">
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="#">Regristrarse</a></li>
-                <li><a href="#">Cómo empezar</a></li>
-                <li><a href="#"></a></li>
-            </ul> 
-        </div>
-    </header> 
+    <?php
+        include("menu.html");
+    ?> 
     <div class="portada">    
         <h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur est ac molestie tristique.
@@ -47,10 +39,8 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur est ac molestie tristique.
         </p>
     </div>
-    <div class="footer">
-        <p>
-             © 2018 Universidad de Carabobo
-        </p>
-    </div>
+    <?php
+        include("footer.html");
+    ?>
 </body>
 </html>

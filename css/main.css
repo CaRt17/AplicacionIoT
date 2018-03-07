@@ -1,3 +1,7 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
 body{
     margin: 0;
     padding: 0;
@@ -7,8 +11,6 @@ body{
 }
 .portada{
     height: 60vh;
-    
-
 }
 h2{
     text-align: center;
@@ -30,7 +32,7 @@ header{
 }
 .nav{
     float: left;
-    margin: -0.9rem 1rem 0rem 0rem;
+    margin: -1.1rem 1rem 0rem 0rem;
     position: absolute;
     right: 0;
     width: 90%;
@@ -64,10 +66,9 @@ a{
 }
 .footer{
     text-align: center;
-    position: relative;
+    position: absolute;
     bottom: 0;
-    padding: 0.1rem;
     background:  #aeff31;
-
+    width: 100%;
 
 }
