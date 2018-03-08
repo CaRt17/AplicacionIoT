@@ -6,22 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/formulario.css">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Questrial" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <!--<script src="js/registro.js"></script>-->
+    
 </head>
 <body>
     <?php
         include("menu.html");
     ?> 
-    <form>
-        <input type="text" name="name" required placeholder="Nombre de usuario"> <br/>
-        <input type="text" name="pw" placeholder="Contraseña" required>
-        <div class="btnRegistrar">
-            <p>Registrar</p>   
-        </div>
+    <form method="post" action="PHP/registro.php">
+        <input type="text" name="user" id="user" required placeholder="Nombre de usuario" required> <br/>
+        <input type="email" name="mail" id="mail" required placeholder="Correo eléctronico" required> <br/>
+        <input type="password" name="pw" id="pw" placeholder="Contraseña" required><br/>
+        <button id="btnRegistrar">
+            Registrar
+        </button> <br/>
+        <div class="menEx" id="menEx">El usuario o el correo ya existen, intenta de nuevo</div><br/>
+        <p>¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
     </form>
+    
     <?php
         include("footer.html");
     ?> 
-
+    
 </body>
 </html>
