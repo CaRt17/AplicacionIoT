@@ -3,9 +3,8 @@
         public $nombre;
         public $correo;
         public $clave;
-
-        public function __construct($nombre, $correo, $clave){
         
+        public function registro($nombre, $correo, $clave){
             include("conexion.php");
             $request1 = mysqli_query($conexion, "SELECT * from usuarios WHERE nombre = '$nombre'"); //Busca coincidencia en la base de datos
             $resp1 = mysqli_num_rows($request1); //Fila donde esta el dato, devuelve cero si no esta
@@ -25,8 +24,22 @@
                 unset($this);
                 echo 1;
             }
-
-
         }
+        public function inicioSesion($nombre, $clave){
+            session_start();
+            include("conexion.php");
+            $requestx = mysqli_query($conexion, "SELECT * FROM usuarios WHERE nombre = '$nombre' AND clave = '$clave'"); //Busca coincidencia en la base de datos
+            $respx = mysqli_fetch_row($requestx); //Array de la fila donde existe la coincidencia 
+            if($respx > 0){
+                $this->nombre = $nombre;
+                $this->correo = $respx[2];
+                $this->clave = $clave;
+                $_SESSION['user'] = $nombre;
+                header("Location: inicio.php");
+            }else{
+                echo "error";
+            }  
+        }
+        
     }
 ?>

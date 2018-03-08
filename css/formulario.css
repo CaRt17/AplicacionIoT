@@ -1,3 +1,12 @@
 .menEx{
     display: none;
 }
+#login{
+    display: none;
+}
+#btnIniciar{
+    cursor: pointer;
+}
+.menNo{
+    display: none;
+}

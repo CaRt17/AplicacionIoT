@@ -4,7 +4,8 @@
     $email = $_POST['mail'];
     $clave = $_POST['pw'];
 
-    $users = new Usuario($nombre, $email, $clave);
+    $users = new Usuario();
+    $users->registro($nombre, $email, $clave);
 
 
 ?>
