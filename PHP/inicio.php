@@ -16,17 +16,9 @@
     <script src="../js/inicio.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">App Iot</div>
-        <div class="nav">
-            <ul class="menu">
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul> 
-        </div>
-    </header>
+    <?php
+        include("menuSesion.php");
+    ?>
     <h1>Proyectos</h1>
     <div id="btnPre">+Crear proyecto</div>
     <form method="post" action="crearProy.php" class="proyecto">
@@ -43,8 +35,9 @@
         while($fila = mysqli_fetch_array($request)){
     ?>
     <div class=proyectos>
-        <p><?php echo $fila['nombre'] ?></p>
-        <p> + -</p>
+        <p><?php echo $fila['nombre']; ?></p>
+        <a href="abrirProy.php?id=<?php echo $fila['id']; ?>">Abrir</a>
+        <a href="borrarProy.php?id=<?php echo $fila['id']; ?>"> Borrar</a>
     </div>   
     <?php
     }

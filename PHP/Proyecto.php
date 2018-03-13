@@ -2,7 +2,7 @@
     session_start();
     
     class Proyecto{
-        
+        public $id;
         public $nombre;
         public $puerto;
         public $pin;
@@ -17,13 +17,14 @@
             $this->$pin= $pin;
             header("Location: inicio.php");
         }
-        public function eliminar($nombre){
+        public function eliminar($id){
             $user =$_SESSION['user'];
             include("conexion.php");
             $request = mysqli_query($conexion, "DELETE FROM proyectos 
-            WHERE nombre = '$nombre'
-            AND usurario='$user'");
+            WHERE id='$id'");
+            header("Location: inicio.php");
         }
+        
     
     }    
 ?>
