@@ -38,9 +38,12 @@
         <p><?php echo $fila['nombre']; ?></p>
         <a href="abrirProy.php?id=<?php echo $fila['id']; ?>">Abrir</a>
         <a href="borrarProy.php?id=<?php echo $fila['id']; ?>"> Borrar</a>
-    </div>   
+    </div> 
     <?php
     }
+    ?>
+    <a href="dibujarGrafica.php"> Graficar</a>  
+    <?php
     include("../footer.html");
     ?>
 </body>
