@@ -18,6 +18,8 @@
                 $this->nombre = $nombre;
                 $this->correo = $correo;
                 $this->clave = $clave;
+                session_start();
+                $_SESSION['user'] = $nombre;
                 header("Location: inicio.php");
                 echo 0;
             }else{
