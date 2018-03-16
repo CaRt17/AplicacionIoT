@@ -8,6 +8,7 @@
 </head>
 <body>
     <?php
+        include("PHP/Graficas.php");
         /*include("PhpSerial.php");
         $serial = new PhpSerial();
         $serial->deviceSet("COM7");
@@ -29,12 +30,14 @@
             $status = "No conectado";
         }else {
             $status = "Conectado";
-            $lectura = fread($fp, 5); //Escribe en el puerto serial 
+            $lectura = fread($fp, 4); //Escribe en el puerto serial 
             fclose($fp);
         }
         echo $status;
         echo ("<br/>");
-        echo $lectura;             
+        $prueba = 60;
+        $grafica1 = new Grafica();
+        $grafica1->insertar($lectura);            
     ?>
 </body>
 </html>
