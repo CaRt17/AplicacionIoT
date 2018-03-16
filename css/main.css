@@ -21,13 +21,13 @@ h2{
 }
 header{
     padding: 0 0 1rem 0;
-    background: #adff2fd6;
+    background: #2196f38f;
 }
 .logo{
     font-size: 1.2rem;
     display: inline-block;
     margin: 1rem 0.3rem 0 1.5rem;
-    width: 10%;
+    width: 20%;
 
 }
 .nav{
@@ -36,6 +36,9 @@ header{
     position: absolute;
     right: 0;
     width: 90%;
+}
+#btnmenu{
+    display: none;
 }
 .menu{
     display: flex;
@@ -64,11 +67,34 @@ a{
 .caja p{
     margin: 1rem 0;
 }
-.footer{
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    background:  #aeff31;
-    width: 100%;
+@media screen and (max-width:550px){
+    .menu{
+        display: none;
+        margin-top: 1rem;
+        margin-left: -5rem;
+        background: #82c4f8a1;
+        width: 110.5%;
+    }
+    .menu li{
+        padding: 0.6rem;
+    }
+    #btnmenu{
+        display: block;
+    }
+    #btnmenu:checked ~ .menu{
+        display: block;
+    }
 
 }
+
+
+/* FOOTER */
+.footer{
+    text-align: center;
+    position: relative;
+    padding: 0.3rem 0;
+    bottom: 0;
+    background:  #2196f38f;
+    width: 100%;
+}
+

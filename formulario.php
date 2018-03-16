@@ -16,7 +16,9 @@
     <?php
         include("menu.html");
     ?> 
+    <div class="formulario">
     <form method="post" action="PHP/registro.php" id="registro">
+        <p class="titulo">Registrate</p>
         <input type="text" name="user" id="user" required placeholder="Nombre de usuario" required> <br/>
         <input type="email" name="mail" id="mail" required placeholder="Correo eléctronico" required> <br/>
         <input type="password" name="pw" id="pw" placeholder="Contraseña" required><br/>
@@ -26,7 +28,10 @@
         <div class="menEx" id="menEx">El usuario o el correo ya existen, intenta de nuevo</div><br/>
         <p>¿Tienes una cuenta? <div id="btnIniciar">Inicia sesión</div></p>
     </form>
+    </div>
+    <div class="formulario">
     <form method="post" action="PHP/login.php" id="login">
+        <p class="titulo">Inicia sesión</p>
         <input type="text" name="user1" id="user1" required placeholder="Nombre de usuario" required> <br/>
         <input type="password" name="pw1" id="pw1" placeholder="Contraseña" required><br/>
         <button id="btnLogin">
@@ -34,7 +39,7 @@
         </button> <br/>
         <div class="menNo" id="menNo">El usuario o la contraseña no son correctos</div><br/>
     </form>
-    
+    </div>
     <?php
         include("footer.html");
     ?> 

@@ -19,7 +19,7 @@
         <h2>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur est ac molestie tristique.
              Fusce laoreet purus et felis ornare, eget interdum ante aliquam. Duis nibh nisi, porttitor sit amet nibh nec,
-            interdum cursus mauris. Aenean rutrum, est ac luctus sagittis, mauris purus ornare ligula, sit amet vehicula felis ex quis risus.
+            interdum cursus mauris. 
             
         </h2>      
     </div>

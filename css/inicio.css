@@ -4,3 +4,15 @@
 .proyecto{
     display: none;
 }
+.containerP{
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+}
+.proyectos{
+    border: 1px solid black;
+    width: 7rem;
+    height: 5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
