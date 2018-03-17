@@ -10,7 +10,7 @@ body{
     font-family: 'Questrial', sans-serif;
 }
 .portada{
-    height: 60vh;
+    height: 50vh;
 }
 h2{
     text-align: center;
@@ -21,7 +21,38 @@ h2{
 }
 header{
     padding: 0 0 1rem 0;
-    background: #2196f38f;
+    background: #2196f38f;    
+}
+.dropmenu{
+    position: relative;
+    display: inline-block;
+    margin: 1rem 0.3rem 0 1.5rem;
+}
+.drop{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.drop a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.drop a:hover {
+    background-color: #f1f1f1
+}
+.dropmenu:hover .drop {
+    display: block;
+}
+.burguer{
+    width: 20px;
+    height: 2.5px;
+    background-color: black;
+    margin: 2.5px 0;
 }
 .logo{
     font-size: 1.2rem;
@@ -63,6 +94,7 @@ a{
     text-align: center;
     padding: 1rem;
     background: gainsboro;
+    height: 15vh;
 }
 .caja p{
     margin: 1rem 0;
@@ -84,7 +116,6 @@ a{
     #btnmenu:checked ~ .menu{
         display: block;
     }
-
 }
 
 
@@ -95,6 +126,5 @@ a{
     padding: 0.3rem 0;
     bottom: 0;
     background:  #2196f38f;
-    width: 100%;
+    width: 100%;    
 }
-
